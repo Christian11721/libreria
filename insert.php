@@ -11,12 +11,6 @@ $editorial = $_POST['editorial'];
 $paginas = $_POST['paginas'];
 $slug = null;
 
-if (!preg_match('/^[A-ZÁÉÍÓÚ][a-záéíóú0-9\s\W]+$/', $titulo)) {
-    echo '<script>alert("El título no es válido.");</script>';
-    echo '<script>window.location.href = "create.php";</script>';
-    exit;
-}
-
 function generarSlug($slug) {
     
     $slug = str_replace(
